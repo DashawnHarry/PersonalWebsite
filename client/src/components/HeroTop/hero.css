@@ -1,0 +1,45 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wordcontainer {
+  justify-content: space-evenly;
+    align-items: baseline;
+  text-align: center;
+    color: white;
+  position: absolute;
+  z-index: 2;
+}
+
+.herovideo {
+  object-fit: fill;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 400px;
+  background: black;
+  opacity: 0.6;
+  z-index: 1;
+}
+/* .overlay{
+    background: black;
+    opacity: 0.2;
+    height: 500px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+} */
+
+#heroname {
+  font-family: "Oswald", sans-serif;
+  font-size: 10vw;
+  font-weight: 900;
+  word-spacing: 20px;
+}
+#herodesc {
+  font-family: "Oswald", sans-serif;
+  word-spacing: 30px;
+}
