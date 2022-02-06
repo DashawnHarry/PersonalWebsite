@@ -8,7 +8,7 @@ const App = () => {
     <>
       <Hero />
       <DescCard />
-      
+      <div style={{height: '200px'}}></div>
     </>
   );
 };

@@ -1,11 +1,32 @@
+@keyframes fadetogrey{
+  from {color: white;}
+  to {color: grey;}
+}
+
+
+
 .desccontainer{
-
-
 background-attachment: fixed;
 background-position: center;
 background-repeat: none;
 background-size: cover;
 
+
 width: 100%;
 min-height: 800px;
+}
+
+.textcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.about{
+    display: flex;
+    color: white;
+    animation-name: fadetogrey;
+    animation-duration: 4s;
+    
 }
