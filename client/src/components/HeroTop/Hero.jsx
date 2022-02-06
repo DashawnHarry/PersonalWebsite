@@ -27,7 +27,7 @@ const Hero = () => {
       
         <div className="wordcontainer">
         <div id="heroname">Harry Flint Flex Dashawn</div>
-        <div id="herodesc">SoftwareEngineer | Artist | VisualEffect Hobbyist</div>
+        <div id="herodesc">SoftwareEngineer | Artist | VisualEffectHobbyist</div>
         </div>
           <video className="herovideo" id="hero_video" autoPlay loop muted playsInline  src={Video} type="video/mp4">   
         </video>
