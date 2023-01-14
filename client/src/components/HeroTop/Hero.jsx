@@ -1,37 +1,112 @@
 import React from "react";
-import Video from "../../personalimages/HeroVideo.mp4";
+
+import Video1 from "../../personalimages/HeroVideo.mp4";
+import Video2 from "../../personalimages/IMG_2031.mp4";
+import Video3 from "../../personalimages/video2.mp4";
+
+import { Carousel } from "react-responsive-carousel";
+
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./hero.css";
 
-import $ from 'jquery'
+function importAll(r) {
+  let images = {};
+  r.keys().map((item) => {
+    images[item.replace("./", "")] = r(item);
+  });
+  return images;
+}
+
+const images = importAll(
+  require.context("../../personalimages", false, /\.(png|jpe?g|svg)$/)
+);
+
+console.log(images)
+
 const Hero = () => {
-    $('body').on('click touchstart', function () {
-        Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
-            get: function () {
-                return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
-            }});
-        const videoElement = document.getElementById('hero_video');
-        if (videoElement.playing) {
-            // video is already playing so do nothing
-        }
-        else {
-            // video is not playing
-            // so play video now
-            videoElement.play();
-        }
-});
-  
-  
-  
-    return (
+  return (
     <>
-      
-        <div className="wordcontainer">
+      <div className="heroContainer">
         <div id="heroname">Harry Flint Flex Dashawn</div>
-        <div id="herodesc">SoftwareEngineer | Artist | VisualEffectHobbyist</div>
-        </div>
-          <video className="herovideo" id="hero_video" autoPlay loop muted playsInline  src={Video} type="video/mp4">   
-        </video>
-     
+      </div>
+      <div className="wordcontainer">
+        <Carousel
+          autoPlay={true}
+          dynamicHeight={false}
+          className="tester"
+          showThumbs={false}
+          infiniteLoop={true}
+          interval={10000}
+        >
+          <div style={{ display: "flex", height: "100vh" }}>
+            <img className="image" src={images["0.png"].default} />
+
+            <img className="image" src={images["1.png"].default} />
+
+            <img className="image" src={images["2.png"].default} />
+          </div>
+          <div style={{ display: "flex", height: "100vh" }}>
+            <img className="image" src={images["3.png"].default} />
+
+            <img className="image" src={images["4.png"].default} />
+
+            <img className="image" src={images["5.png"].default} />
+          </div>
+          <div style={{ display: "flex", height: "100vh" }}>
+            <img className="image" src={images["6.png"].default} />
+
+            <img className="image" src={images["7.png"].default} />
+
+            <img className="image" src={images["8.png"].default} />
+          </div>
+          <div style={{ display: "flex", height: "100vh" }}>
+            <img className="image" src={images["9.png"].default} />
+
+            <img className="image" src={images["10.png"].default} />
+
+            <img className="image" src={images["11.png"].default} />
+          </div>
+          <div style={{ display: "flex", height: "100vh" }}>
+            <img className="image" src={images["12.png"].default} />
+
+            <img className="image" src={images["13.png"].default} />
+
+            <img className="image" src={images["14.png"].default} />
+          </div>
+          <div style={{ display: "flex", height: "100vh" }}>
+            <video
+              className="herovideo"
+              id="hero_video"
+              autoPlay
+              loop
+              muted
+              playsInline
+              src={Video1}
+              type="video/mp4"
+            />
+            <video
+              className="herovideo"
+              id="hero_video"
+              autoPlay
+              loop
+              muted
+              playsInline
+              src={Video2}
+              type="video/mp4"
+            />
+            <video
+              className="herovideo"
+              id="hero_video"
+              autoPlay
+              loop
+              muted
+              playsInline
+              src={Video3}
+              type="video/mp4"
+            />
+          </div>
+        </Carousel>
+      </div>
     </>
   );
 };

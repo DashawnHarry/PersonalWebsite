@@ -1,42 +1,17 @@
-@media (max-width: 575.98px) {
-    header.home-hero video {
-        display: none;
-   }
+@font-face {
+    font-family: Overglow;
+    src: url(../Fonts/OverglowFont-Demo.ttf);
 }
-body{
+
+
+body {
     background-color: rgb(0, 0, 0);
-    
-}
-
-body::-webkit-scrollbar{
-width: 1px;
-}
-body::-webkit-scrollbar-thumb{
-    background-color: green;
-}
-body::-webkit-scrollbar:hover{
-    width: 5px;
-}
-
-.test{
-    margin-top: 60px;
-    margin-left: 200px;
-    height: 40px;
-    
-    
-    
-    color: red;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: large;
-
-    justify-content: center;
-    align-self: center;
 
 }
 
-.container{
-background-color: gray;
-height: 100vh;
-width: 100%;
+.container {
+    background-color: gray;
+    height: 100vh;
+    width: 100%;
 
 }
