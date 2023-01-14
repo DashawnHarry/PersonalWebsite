@@ -1,3 +1,4 @@
+const ImageminPlugin = require("imagemin-webpack-plugin").default;
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
@@ -28,21 +29,24 @@ module.exports = {
       },
       {
         test: /\.mp4$/,
-        use: 'file-loader?name=videos/[name].[ext]',
- },
- {
-  test: /\.(png|jpg|gif)$/,
-  use: [{
-      loader: 'file-loader',
-      options: {}
-  }]
-}
+        use: "file-loader?name=videos/[name].[ext]",
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {},
+          },
+        ],
+      },
     ],
   },
   resolve: {
     extensions: [".jsx", ".js"],
   },
   plugins: [
+    new ImageminPlugin(),
     new HtmlWebpackPlugin({
       inject: "head",
       template: "./public/index.html",
