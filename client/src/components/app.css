@@ -3,6 +3,11 @@
     src: url(../Fonts/OverglowFont-Demo.ttf);
 }
 
+@font-face {
+    font-family: Diesel;
+    src: url(../Fonts/DieselItalicPersonalUseBoldItalic-mLJAj.ttf);
+}
+
 
 body {
     background-color: rgb(0, 0, 0);
