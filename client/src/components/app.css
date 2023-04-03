@@ -8,6 +8,11 @@
     src: url(../Fonts/DieselItalicPersonalUseBoldItalic-mLJAj.ttf);
 }
 
+@font-face {
+    font-family: Basement;
+    src: url(../Fonts/BasementGrotesque-Black_v1.202.otf);
+}
+
 
 body {
     background-color: rgb(0, 0, 0);

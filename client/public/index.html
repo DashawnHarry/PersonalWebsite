@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harry</title>
     <script defer src="app.js"></script>
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
     </style>
@@ -18,5 +21,9 @@
 <body>
     <div id="root"></div>
 </body>
+
+    <script type="text/babel">
+        ReactDOM.render(<App />, document.getElementById('root'))
+    </script>
 
 </html>

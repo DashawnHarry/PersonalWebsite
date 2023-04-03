@@ -1,6 +1,8 @@
+import moment from "moment";
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import { TypeAnimation } from "react-type-animation";
+import Ticker, { NewsTicker } from "nice-react-ticker";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./hero.css";
@@ -17,44 +19,55 @@ const images = importAll(
   require.context("../../personalimages", false, /\.(png|jpe?g|svg)$/)
 );
 
-//14.png
-console.log(images);
+
 
 const Hero = () => {
-  const imageIndexArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+  const imageIndexArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
   return (
     <>
       <div className="heroContainer">
-        <div id="heroname">
-          <TypeAnimation
-            id="heroname"
-            sequence={[
-              "Harry",
-              2000,
-              "FlintFlex",
-              2000,
-              "Dashawn",
-              2000,
-              "Flint",
-            ]}
-            repeat={Infinity}
-            cursor={true}
-            style={{
-              color: "rgb(248, 252, 6)",
-              fontFamily: "Diesel",
-              fontSize: "10vw",
-              fontWeight: "500",
-            }}
-            speed={15}
+        <Ticker>
+          <NewsTicker
+            id="1"
+            title="© Harry"
+            meta={moment().format("YYYY-DD-MM hh:mm:ss")}
           />
-        </div>
+          <NewsTicker
+            id="2"
+            title="© Harry"
+            meta={moment().format("YYYY-DD-MM hh:mm:ss")}
+          />
+          <NewsTicker
+            id="3"
+            title="© Harry"
+            meta={` You accessed the website on ${moment().format(
+              "YYYY-DD-MM hh:mm:ss"
+            )}`}
+          />
+          <NewsTicker
+            id="4"
+            title="© Harry"
+            meta={moment().format("YYYY-DD-MM hh:mm:ss")}
+          />
+        </Ticker>
+        <TypeAnimation
+          className="heroname"
+          sequence={[
+            "Harry",
+            5000,
+            "Dashawn"
+          ]}
+          repeat={Infinity}
+          cursor={true}
+          speed={0.1}
+        />
       </div>
-      <div className="wordcontainer">
+      <div className="imagecontainer">
         <Carousel
           autoPlay={true}
           dynamicHeight={false}
-          className="tester"
+          className="carousel"
           showThumbs={false}
           infiniteLoop={true}
           interval={10000}
@@ -63,7 +76,7 @@ const Hero = () => {
             console.log(index);
             return (
               <div style={{ display: "flex", height: "100vh" }}>
-                <img className="image" src={images[`${index}.png`].default} />
+                <img className="image" src={images[`${number}.png`].default} />
               </div>
             );
           })}
