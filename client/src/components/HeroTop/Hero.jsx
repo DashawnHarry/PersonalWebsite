@@ -56,7 +56,8 @@ const Hero = () => {
           sequence={[
             "Harry",
             5000,
-            "Dashawn"
+            "Dashawn",
+            5000
           ]}
           repeat={Infinity}
           cursor={true}
@@ -73,7 +74,6 @@ const Hero = () => {
           interval={10000}
         >
           {imageIndexArray.map((number, index) => {
-            console.log(index);
             return (
               <div style={{ display: "flex", height: "100vh" }}>
                 <img className="image" src={images[`${number}.png`].default} />
